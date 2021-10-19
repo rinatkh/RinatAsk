@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" class="h-100 font" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Rinat Khairullin">
+    <title>RinatAsk</title>
+    <link rel="canonical" href="#">
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/my.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+<header>
+    <!--navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="name_header" href="#">Ask Rinat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <form class="d-flex">
+                    <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+                    <button type="button" class="btn btn-dark search-btn">Ask!</button>
+                </form>
+            </div>
+            <div>
+                <img class="img_in_header" src="../static/img/duck.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col">
+                <div class="row">
+                    <div class="nav">
+                        <div class="container">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="header_text">Rinat Khairullin</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="nav-text">Settings</a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="nav-text">Log out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <div class="title_in_main">Settings:&nbsp;</div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title_in_main">Dr Pepper</div>
+                    </li>
+                </ul>
+                <div class="mb-3 row">
+                    <label for="inputLogin" class="col-sm-2 col-form-label">Login</label>
+                    <div class="col-sm-10">
+                        <div class="input-group mb-3">
+                            <input type="text" id="inputLogin" class="form-control" placeholder="DR Pepper"
+                                   aria-label="Username"
+                                   aria-describedby="basic-addon1">
+                            <div id=" #" class="invalid-feedback">
+                                Please provide a valid login.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <div class="input-group mb-3">
+                            <input type="text" id="inputEmail" class="form-control" placeholder="DR_Pepper@mail.ru"
+                                   aria-label="Email"
+                                   aria-describedby="basic-addon1">
+                            <div id="#" class="invalid-feedback">
+                                Please provide a valid login.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputNickname" class="col-sm-2 col-form-label">Nickname</label>
+                    <div class="col-sm-10">
+                        <div class="input-group mb-3">
+                            <input type="text" id="inputNickname" class="form-control" placeholder="Pepper"
+                                   aria-label="Nickname"
+                                   aria-describedby="basic-addon1">
+                            <div id="  #" class="invalid-feedback">
+                                Please provide a valid login.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                        <img class="img_in_question" src="#"></img>
+                        <div class="form-group">
+                            <input id="file" type="file" class="file" data-preview-file-type="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-2"></div>
+                    <button type="button" class="btn btn-dark save-btn">Save!</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="title_in_main">Popular tags</div>
+                <ul class="nav space-left-20px">
+                    <li class="nav-item">
+                        <a class="popular-title" href="#">perl</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: blue; font-size: 25px;">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: green; font-size: 30px;">MySQL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: red; font-size: 30px;">Technopark</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: yellow; font-size: 25px;">Django</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: black; font-size: 25px;">MailRU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: orange; font-size: 20px;">Psycho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="popular-title" href="#" style="color: purple; font-size: 25px;">FireFox</a>
+                    </li>
+                </ul>
+                <div class="col space-left-40px">
+                    <div class="title_in_main">Best Members</div>
+                    <a class="row popular-link">Dr House</a>
+                    <a class="row popular-link">Bender</a>
+                    <a class="row popular-link">Queen Victoria</a>
+                    <div class="space_bottom-200px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- footer -->
+<footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3 bg-dark">
+        <a class="text_footer" href="#">Ask Rinat</a>
+    </div>
+</footer>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -35,10 +35,9 @@ main > .container {
 
 .main_question {
     border: 2px black groove;
-    border-radius: 30px;
     padding: 30px;
     margin-top: 30px;
-    height: 250px;
+    height: 200px;
     width: 875px;
 }
 
@@ -194,4 +193,9 @@ li.nav-item a {
 
 .page {
     margin-top: 15px;
+}
+
+.save-btn{
+    width: 100px;
+    margin-left: 500px;
 }
