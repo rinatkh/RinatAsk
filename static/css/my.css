@@ -91,9 +91,11 @@ li.nav-item a {
     font-size: 1.3em;
     border-radius: 100px;
 }
-.like_div{
+
+.like_div {
     margin-top: 20px;
 }
+
 .like-toggle.basic2 {
     border: none;
     width: 40px;
@@ -162,4 +164,28 @@ li.nav-item a {
 .popular-link {
     font-size: 25px;
     margin: 15px
+}
+
+.dark-line {
+    margin-top: 20px;
+    margin-left: -200px;
+    background: black;
+    width: 900px;
+    height: 2px;
+    margin-bottom: 90px;
+}
+
+.col-8 > .dark-line {
+    margin-left: -30px;
+    margin-bottom: 40px;
+}
+
+.answer-btn {
+    margin-left: 720px;
+    margin-bottom: 15px;
+}
+
+.settings_left {
+    width: 250px;
+    margin-left: 550px;
 }
