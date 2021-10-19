@@ -1,7 +1,9 @@
 /*<!-- Custom styles for this template -->*/
-
+*{
+    font-family: Snell Roundhand, cursive;
+}
 main > .container {
-    padding: 150px 15px 0;
+    padding: 120px 15px 0;
 }
 
 .img_in_header {
@@ -188,4 +190,8 @@ li.nav-item a {
 .settings_left {
     width: 250px;
     margin-left: 550px;
+}
+
+.page {
+    margin-top: 15px;
 }
