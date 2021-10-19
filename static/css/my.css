@@ -71,53 +71,48 @@ li.nav-item a {
 }
 
 
-.rating-area {
-    overflow: hidden;
-    margin: 10px auto;
-}
-.rating-area:not(:checked) > input {
-    display: none;
+.like {
+    margin: 2px 0 0 15px;
+    padding-right: 0;
 }
 
-.rating-area:not(:checked) > label {
-    float: right;
-    width: 20px;
-    padding: 0;
-    cursor: pointer;
-    font-size: 22px;
-    line-height: 22px;
-    color: lightgrey;
-    text-shadow: 1px 1px #bbb;
+.button_like {
+    margin-left: 0;
+    margin-top: 2px;
+    padding-left: 0;
 }
 
-.rating-area:not(:checked) > label:before {
-    content: '★';
+.like-toggle {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    width: 40px;
+    height: 30px;
+    font-size: 1.3em;
+    border-radius: 100px;
+}
+.like_div{
+    margin-top: 20px;
+}
+.like-toggle.basic2 {
+    border: none;
+    width: 40px;
+    height: 30px;
+    font-size: 1.3em;
+    border-radius: 30px;
+    background: #001dff;
+    color: #fff;
 }
 
-.rating-area > input:checked ~ label {
-    color: gold;
-    text-shadow: 1px 1px #c60;
+
+.text_in_like {
+
+    font-size: 14px;
+    weight: 15px;
 }
 
-.rating-area:not(:checked) > label:hover,
-.rating-area:not(:checked) > label:hover ~ label {
-    color: gold;
-}
-
-.rating-area > input:checked + label:hover,
-.rating-area > input:checked + label:hover ~ label,
-.rating-area > input:checked ~ label:hover,
-.rating-area > input:checked ~ label:hover ~ label,
-.rating-area > label:hover ~ input:checked ~ label {
-    color: gold;
-    text-shadow: 1px 1px goldenrod;
-}
-
-.rate-area > label:active {
-    position: relative;
-}
-.question-title{
-	font-size: 30px;
+.question-title {
+    font-size: 30px;
     margin-top: -12px;
     margin-bottom: 12px;
     text-decoration: underline;
@@ -125,36 +120,46 @@ li.nav-item a {
     overflow: hidden;
 }
 
-.question-text{
-	font-size: 23px;
-    margin-top: 15px;
-    margin-bottom: 12px;
+.question-text {
+    font-size: 20px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin-left: 57px;
 }
+
 .question-footer {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 .second-question-tag {
-	padding-left: 20px;
+    padding-left: 20px;
 }
 
 .popular-title {
-	margin: 25px;
+    margin: 25px;
 }
 
 .space-left-40px {
-	margin-left: 40px;
-	margin-top: 80px;
+    margin-left: 40px;
+    margin-top: 80px;
 }
 
 .space-left-20px {
-	margin-left: 20px;
-}
-.space_bottom-200px {
-	margin-bottom: 200px;
+    margin-left: 20px;
 }
 
-.popular-link{
+.space_bottom-200px {
+    margin-bottom: 200px;
+}
+
+.select-question {
+    padding: 30px;
+    height: 300px;
+    width: 900px;
+}
+
+.popular-link {
     font-size: 25px;
     margin: 15px
 }
