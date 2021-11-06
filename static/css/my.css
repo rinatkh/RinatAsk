@@ -1,15 +1,21 @@
 /*<!-- Custom styles for this template -->*/
 *{
-    font-family: Snell Roundhand, cursive;
+    font-family: "Arial", fantasy ;
 }
 main > .container {
     padding: 120px 15px 0;
 }
 
+.nav-text {
+	color: white;
+	font-size: 25px;
+	text-decoration: auto;
+}
+
 .img_in_header {
     width: 100px;
     height: 100px;
-    margin-left: 400px;
+    margin-left: 150px;
     border: 2px white groove;
 }
 
@@ -25,12 +31,11 @@ main > .container {
 }
 
 .name_header {
-    font-size: 50px;
+    font-size: 40px;
     padding-left: 20px;
     text-decoration: auto;
     color: white;
-    width: 240px;
-    height: 75px;
+    width: 235px;
 }
 
 .main_question {
@@ -38,7 +43,6 @@ main > .container {
     padding: 30px;
     margin-top: 30px;
     height: 250px;
-    width: 875px;
 }
 
 .title_in_main {
@@ -159,7 +163,6 @@ li.nav-item a {
 .select-question {
     padding: 30px;
     height: 300px;
-    width: 900px;
 }
 
 .popular-link {
@@ -171,7 +174,6 @@ li.nav-item a {
     margin-top: 20px;
     margin-left: -200px;
     background: black;
-    width: 900px;
     height: 2px;
     margin-bottom: 90px;
 }
@@ -184,11 +186,6 @@ li.nav-item a {
 .answer-btn {
     margin-left: 720px;
     margin-bottom: 15px;
-}
-
-.settings_left {
-    width: 250px;
-    margin-left: 550px;
 }
 
 .page {
