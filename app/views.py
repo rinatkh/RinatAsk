@@ -16,24 +16,30 @@ questions = [
     } for i in range(100)
 ]
 
+tags = [
+    {'id': 0, 'text': 'perl'},
+    {'id': 1, 'text': 'Python'},
+    {'id': 2, 'text': 'MySQL'},
+    {'id': 3, 'text': 'Technopark'},
+    {'id': 4, 'text': 'Django'},
+    {'id': 5, 'text': 'MailRU'},
+    {'id': 6, 'text': 'FireFox'},
+    {'id': 7, 'text': 'Psycho'}
+]
+
+
 def index(request):
-    paginator = Paginator(questions, 7)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
+    content = paginate(questions, request, 7)
     return render(request, "index.html", {"questions": content})
 
 
 def hot(request):
-    paginator = Paginator(questions, 7)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
+    content = paginate(questions, request, 7)
     return render(request, "hot.html", {"questions": content})
 
 
 def question(request, number):
-    paginator = Paginator(answers_in_question, 7)
-    page = request.GET.get('page')
-    content = paginator.get_page(page)
+    content = paginate(answers_in_question, request, 7)
     return render(request, "question.html", {"que": questions[number], "questions": content})
 
 
@@ -52,27 +58,15 @@ def register(request):
 def settings(request):
     return render(request, "settings.html")
 
+
+def tag(request, id):
+    content = paginate(questions, request, 7)
+    return render(request, "tag.html", {"tag": tags[id], "questions": content})
+
+
 def paginate(objects_list, request, per_page):
     paginator = Paginator(objects_list, per_page)
-    page_number = request.GET.get('page', 1)
+    page_number = request.GET.get('page')
     page = paginator.get_page(page_number)
 
-    is_paginated = page.has_other_pages()
-    if page.has_previous():
-        prev_url = '?page={}'.format(page.previous_page_number())
-    else:
-        prev_url = ''
-
-    if page.has_next():
-        next_url = '?page={}'.format(page.next_page_number())
-    else:
-        next_url = ''
-
-    context = {
-        'page': page,
-        'is_paginated': is_paginated,
-        'next_url': next_url,
-        'prev_url': prev_url
-    }
-
-    return context
+    return page
