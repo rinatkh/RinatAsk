@@ -1,0 +1,21 @@
+{% extends "include/base.html" %}
+{% load static %}
+
+{% block navbar %}
+    {% include "include/navbar_login.html" %}
+{% endblock navbar %}
+
+{% block content %}
+    <ul class="nav">
+        <li>
+            <a class="nav-link title_in_main" href="{% url "index" %}">New questions</a>
+        </li>
+        <li class="nav-item">
+            <div class="title_in_main">Hot questions</div>
+        </li>
+    </ul>
+    {% for question in questions %}
+        {% include 'include/single_question.html' %}
+    {% endfor %}
+    {% include 'include/pagination.html' %}
+{% endblock content %}

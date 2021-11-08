@@ -1,0 +1,23 @@
+{% extends "include/base.html" %}
+{% load static %}
+
+{% block navbar %}
+    {% include "include/navbar_login.html" %}
+{% endblock navbar %}
+
+{% block content %}
+    {% include 'include/selected_question.html' %}
+
+    {% for answer in questions %}
+        {% include 'include/single_answer.html' %}
+    {% endfor %}
+    {% include 'include/pagination.html' %}
+    <div class="dark-line"></div>
+    <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                  placeholder="Enter your answer here.."></textarea>
+    </div>
+    <button type="button" class="btn btn-dark answer-btn">Answer!</button>
+{% endblock content %}
+
+

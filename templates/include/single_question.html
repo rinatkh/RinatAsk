@@ -1,0 +1,42 @@
+{% load static %}
+<div class="row main_question">
+    <div class="col-2">
+        <img class="img_in_question" src="{% static 'img/duck.jpg' %}" alt=""/>
+        <div class="row like_div">
+            <div class="col like">
+                <div>
+                    <button class='like-toggle basic2'>♥</button>
+                </div>
+            </div>
+            <div class="col button_like">
+                <span class="badge bg-secondary like_counter">4</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-10">
+        <a class="question-title" href="{% url "question" question.number %}">{{ question.title }}</a>
+        <div class="question-text">{{ question.text }}
+        </div>
+        <div class="row question-footer">
+            <div class="col-3">
+                <a href="#">Answer(n)</a>
+            </div>
+            <div class="col-2">Tags:</div>
+            <div class="col-6">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#">Django</a>
+                    </li>
+                    <li class="nav-item second-question-tag">
+                        <a href="#">MySQL</a>
+                    </li>
+                    <li class="nav-item second-question-tag">
+                        <a href="#">psycho</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
