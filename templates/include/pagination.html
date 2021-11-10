@@ -6,9 +6,9 @@
             </a>
         </li>
 
-        {% if questions.has_previous %}
+        {% if prev_url %}
             <li class="page-item enable">
-                <a class="page-link" href="?page = {{ questions.previous_page_number }}">Previous</a>
+                <a class="page-link" href="?page = {{ prev_url }} ">Previous</a>
             </li>
         {% else %}
             <li class="page-item disabled">
@@ -18,13 +18,13 @@
 
         <li class="page-item">
             <a class="page-link"
-               href="?page={{ questions.number }}">{{ questions.number }}
+               href="?page={{ page.number }}">{{ page.number }}
             </a>
         </li>
 
-        {% if questions.has_next %}
+        {% if next_url %}
             <li class="page-item enable">
-                <a class="page-link" href="?page={{ questions.next_page_number }}">Next</a>
+                <a class="page-link" href="?page={{ next_url }}">Next</a>
             </li>
         {% else %}
             <li class="page-item disabled">
@@ -34,7 +34,7 @@
 
         <li class="page-item">
             <a class="page-link"
-               href="?page={{ questions.paginator.num_pages }}">Last
+               href="?page={{ page.count }}">Last
             </a>
         </li>
     </ul>

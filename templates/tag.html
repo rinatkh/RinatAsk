@@ -8,7 +8,7 @@
 {% block content %}
     {% include 'include/base_tag.html' %}
 
-    {% for question in questions %}
+    {% for question in page.object_list %}
         {% include 'include/single_question.html' %}
     {% endfor %}
     {% include 'include/pagination.html' %}

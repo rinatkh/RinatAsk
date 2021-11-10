@@ -8,7 +8,7 @@
 {% block content %}
     {% include 'include/selected_question.html' %}
 
-    {% for answer in questions %}
+    {% for answer in page.object_list %}
         {% include 'include/single_answer.html' %}
     {% endfor %}
     {% include 'include/pagination.html' %}

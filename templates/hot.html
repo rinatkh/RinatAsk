@@ -14,7 +14,7 @@
             <div class="title_in_main">Hot questions</div>
         </li>
     </ul>
-    {% for question in questions %}
+    {% for question in page.object_list %}
         {% include 'include/single_question.html' %}
     {% endfor %}
     {% include 'include/pagination.html' %}
