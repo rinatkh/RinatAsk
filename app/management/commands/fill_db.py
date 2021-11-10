@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from app.models import Qstion, User, Tags, Answer
+from app.models import Question, Profile, Tags, Answer
 from random import choice
 from faker import Faker
 
@@ -7,46 +7,12 @@ f = Faker()
 
 
 class Command(BaseCommand):
-    def handle(self, *args, **options):
-        self.fill_users(options['users'])
-        self.fill_tags(options['tags'])
-        self.fill_questions(options['questions'])
-        self.fill_answers(options['answers'])
-
-    def add_arguments(self, parser):
-        parser.add_argument(
-            '-u',
-            '--users',
-            action='store',
-            dest='users',
-            type=int
-        )
-        parser.add_argument(
-            '-t',
-            '--tags',
-            action='store',
-            dest='tags',
-            type=int
-        )
-        parser.add_argument(
-            '-q',
-            '--questions',
-            action='store',
-            dest='questions',
-            type=int
-        )
-        parser.add_argument(
-            '-a',
-            '--answers',
-            action='store',
-            dest='answers',
-            type=int
-        )
 
 
     def fill_users(self, cnt):
         for i in range(cnt):
-            User.objects.create(
+            print(i)
+            Profile.objects.create(
                 name=f.name(),
                 birth_date=f.date()
             )
@@ -54,6 +20,7 @@ class Command(BaseCommand):
 
     def fill_tags(self, cnt):
         for i in range(cnt):
+            print(i)
             Tags.objects.create(
                 designation=f.word()
             )
@@ -61,7 +28,7 @@ class Command(BaseCommand):
 
     def fill_questions(self, cnt):
         users_ids = list(
-            User.objects.values_list(
+            Profile.objects.values_list(
                 'id', flat=True
             )
         )
@@ -71,7 +38,8 @@ class Command(BaseCommand):
             )
         )
         for i in range(cnt):
-            qst = Qstion.objects.create(
+            print(i)
+            qst = Question.objects.create(
                 author_id=choice(users_ids),
                 text='. '.join(f.sentences(f.random_int(min=2, max=5))),
                 title=f.sentence()[:128],
@@ -82,20 +50,21 @@ class Command(BaseCommand):
 
     def fill_answers(self, cnt):
         users_ids = list(
-            User.objects.values_list(
+            Profile.objects.values_list(
                 'id', flat=True
             )
         )
         qst_ids = list(
-            Qstion.objects.values_list(
+            Question.objects.values_list(
                 'id', flat=True
             )
         )
         for i in range(cnt):
+            print(i)
             Answer.objects.create(
                 author_id=choice(users_ids),
                 text='. '.join(f.sentences(f.random_int(min=2, max=5))),
                 question_id=choice(qst_ids)
             )
-
+[]
 
