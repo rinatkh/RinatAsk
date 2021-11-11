@@ -8,7 +8,7 @@
 
         {% if prev_url %}
             <li class="page-item enable">
-                <a class="page-link" href="?page = {{ prev_url }} ">Previous</a>
+                <a class="page-link" href="{{ prev_url }} ">Previous</a>
             </li>
         {% else %}
             <li class="page-item disabled">
@@ -24,7 +24,7 @@
 
         {% if next_url %}
             <li class="page-item enable">
-                <a class="page-link" href="?page={{ next_url }}">Next</a>
+                <a class="page-link" href="{{ next_url }}">Next</a>
             </li>
         {% else %}
             <li class="page-item disabled">
@@ -34,7 +34,7 @@
 
         <li class="page-item">
             <a class="page-link"
-               href="?page={{ page.count }}">Last
+               href="?page={{ page.paginator.count }}">Last
             </a>
         </li>
     </ul>
