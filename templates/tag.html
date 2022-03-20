@@ -1,0 +1,17 @@
+{% extends "include/base.html" %}
+{% load static %}
+
+{% block navbar %}
+    {% include "include/navbar_login.html" %}
+{% endblock navbar %}
+
+{% block content %}
+    {% include 'include/base_tag.html' %}
+
+    {% for question in page.object_list %}
+        {% include 'include/single_question.html' %}
+    {% endfor %}
+    {% include 'include/pagination.html' %}
+
+{% endblock content %}
+
